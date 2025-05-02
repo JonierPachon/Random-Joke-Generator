@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1 class="display-joke__title">Joke</h1>
+    <button onclick="toggleButtonFilters()">Filters</button>
+
+    <div class="master-container">
+      <div class="filters filters-close">
+        <!-- categories -->
+        <div class="filters__categories">
+          <h3 class="filters__title">Categories</h3>
+
+          <label class="filters__option">
+            <input
+              checked
+              type="checkbox"
+              name="selection"
+              value="Any"
+              id="any-joke"
+              onclick="checkboxAnyBeingSelected(this)"
+            />
+            Any
+          </label>
+
+          <div
+            id="custom-options"
+            class="filters__custom-options"
+            style="margin-top: 10px"
+          >
+            <label class="filters__checkbox">
+              <input
+                type="checkbox"
+                name="category"
+                value="Programming"
+                onclick="noneCategorySelected(this)"
+              />
+              Programming </label
+            ><br />
+            <label class="filters__checkbox">
+              <input
+                type="checkbox"
+                name="category"
+                value="Miscellaneous"
+                onclick="noneCategorySelected(this)"
+              />
+              Misc </label
+            ><br />
+            <label class="filters__checkbox">
+              <input
+                type="checkbox"
+                name="category"
+                value="Pun"
+                onclick="noneCategorySelected(this)"
+              />
+              Pun </label
+            ><br />
+            <label class="filters__checkbox">
+              <input
+                type="checkbox"
+                name="category"
+                value="Spooky"
+                onclick="noneCategorySelected(this)"
+              />
+              Spooky </label
+            ><br />
+            <label class="filters__checkbox">
+              <input
+                type="checkbox"
+                name="category"
+                value="Christmas"
+                onclick="noneCategorySelected(this)"
+              />
+              Christmas
+            </label>
+          </div>
+        </div>
+
+        <div class="filters__flags-blacklist">
+          <h3 class="filters__flags-blacklist--title">
+            Flags to Blacklist <br />
+            (Optional)
+          </h3>
+          <form>
+            <label class="filters__checkbox">
+              <input type="checkbox" name="option1" value="nsfw" />
+              nsfw </label
+            ><br />
+            <label class="filters__checkbox">
+              <input type="checkbox" name="option2" value="religious" />
+              religious </label
+            ><br />
+            <label class="filters__checkbox">
+              <input type="checkbox" name="option3" value="political" />
+              political </label
+            ><br />
+            <label class="filters__checkbox">
+              <input type="checkbox" name="option4" value="racist" />
+              racist </label
+            ><br />
+            <label class="filters__checkbox">
+              <input type="checkbox" name="option5" value="sexist" />
+              sexist </label
+            ><br />
+            <label class="filters__checkbox">
+              <input type="checkbox" name="option6" value="explicit" />
+              explicit
+            </label>
+          </form>
+        </div>
+      </div>
+
+      <div class="display-joke">
+        <div
+          class="display-joke__joke-first-part display-joke__joke-first-part-close"
+        >
+          <!--  -->
+          <div class="display-joke__loading display-joke__loading-close">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <!--  -->
+          <p id="joke" class="display-joke__joke"></p>
+        </div>
+        <div
+          class="display-joke__joke-two-parts display-joke__joke-two-parts-close"
+        ></div>
+        <div class="display-joke__button-container">
+          <button class="display-joke__button">New Joke</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
