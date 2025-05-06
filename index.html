@@ -16,26 +16,22 @@
       <div class="filters filters-close">
         <!-- categories -->
         <div class="filters__categories">
-          <h3 class="filters__title">Categories</h3>
-
-          <label class="filters__option">
-            <input
-              checked
-              type="checkbox"
-              name="selection"
-              value="Any"
-              id="any-joke"
-              onclick="checkboxAnyBeingSelected(this)"
-            />
-            Any
-          </label>
-
-          <div
-            id="custom-options"
-            class="filters__custom-options"
-            style="margin-top: 10px"
-          >
-            <label class="filters__checkbox">
+          <div id="custom-options" class="filters__custom-option">
+            <h3 class="filters__title">Categories</h3>
+            <!-- <br /> -->
+            <label class="filters__option">
+              <input
+                checked
+                type="checkbox"
+                name="selection"
+                value="Any"
+                id="any-joke"
+                onclick="checkboxAnyBeingSelected(this)"
+              />
+              Any
+            </label>
+            <br />
+            <label>
               <input
                 type="checkbox"
                 name="category"
@@ -84,9 +80,11 @@
         </div>
 
         <div class="filters__flags-blacklist">
-          <h3 class="filters__flags-blacklist--title">
-            Flags to Blacklist <br />
-            (Optional)
+          <!-- Flags to Blacklist <br />
+            (Optional) -->
+          <h3 class="filters__title">
+            Flags to <br />
+            Blacklist
           </h3>
           <form>
             <label class="filters__checkbox">
