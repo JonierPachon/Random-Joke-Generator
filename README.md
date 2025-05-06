@@ -11,8 +11,8 @@ A simple and fun web app that displays random jokes using an external API. This 
 
 ## 📸 Demo
 
-<p align="center"><img src="https://github.com/JonierPachon/Random-Joke-Generator/blob/main/Screenshot%202025-05-02%20174324.png" alt="My Image" width="500" height="auto" ></p>
-<p align="center"><img src="https://github.com/JonierPachon/Random-Joke-Generator/blob/main/Screenshot%202025-05-02%20182751.png" alt="My Image" width="300" height="auto"></p>
+<p align="center"><img src="https://github.com/JonierPachon/Random-Joke-Generator/blob/main/Pc%20Screen.png" alt="My Image" width="700" height="auto" ></p>
+<p align="center"><img src="https://github.com/JonierPachon/Random-Joke-Generator/blob/main/Phone-Screen.png" alt="My Image" width="300" height="auto"></p>
 
 ## 🚀 Live Demo
 
