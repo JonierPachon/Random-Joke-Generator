@@ -13,8 +13,8 @@
     margin: 1.5rem 0 2rem;
   }
 
-  .filers {
-    padding: 0.3rem;
+  .filters {
+    padding: 1rem;
   }
   .display-joke__joke-first-part {
     padding: 15px;
@@ -34,6 +34,7 @@
   .filters {
     padding: 0.7rem;
     gap: 0.8rem;
+    border-radius: 25px;
   }
   .filters__title {
     padding: 0 0 0.5rem 0;
