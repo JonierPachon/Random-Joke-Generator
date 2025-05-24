@@ -33,12 +33,12 @@ A simple and fun web app that displays random jokes using an external API. This 
 2. Open ```index.html``` in your browser.
 3. Click the **"New Joke"** button and enjoy a laugh!
 
-## 📚 What I Learned
-
-- How to use the fetch() function in JavaScript
-- Working with APIs and handling JSON data
-- Updating the DOM dynamically
-- Basic project structure and styling
+## 🧠 Key Concepts Practiced
+- Canvas rendering and game loop logic
+- Real-time keyboard/mouse interaction
+- Adaptive scaling and responsive controls
+- Managing state transitions (pause, game over, reset)
+- Collision detection and dynamic movement
 
 ## 🎯 Future Improvements
 - Add loading animations while the joke is being fetched
