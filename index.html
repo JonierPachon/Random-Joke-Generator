@@ -1,140 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Joke Generator</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaQueries.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <h1 class="display-joke__title">Joke</h1>
-    <button onclick="toggleButtonFilters()">Filters</button>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Random Joke Generator</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="mediaQueries.css" />
+      <script src="script.js" defer></script>
+   </head>
+   <body>
+      <h1 class="display-joke__title">Joke</h1>
+      <button id="filter-toggle">Filters</button>
 
-    <div class="master-container">
-      <div class="filters filters-close">
-        <!-- categories -->
-        <div class="filters__categories">
-          <div id="custom-options" class="filters__custom-option">
-            <h3 class="filters__title">Categories</h3>
-            <!-- <br /> -->
-            <label class="filters__option">
-              <input
-                checked
-                type="checkbox"
-                name="selection"
-                value="Any"
-                id="any-joke"
-                onclick="checkboxAnyBeingSelected(this)"
-              />
-              Any
-            </label>
-            <br />
-            <label>
-              <input
-                type="checkbox"
-                name="category"
-                value="Programming"
-                onclick="noneCategorySelected(this)"
-              />
-              Programming </label
-            ><br />
-            <label class="filters__checkbox">
-              <input
-                type="checkbox"
-                name="category"
-                value="Miscellaneous"
-                onclick="noneCategorySelected(this)"
-              />
-              Misc </label
-            ><br />
-            <label class="filters__checkbox">
-              <input
-                type="checkbox"
-                name="category"
-                value="Pun"
-                onclick="noneCategorySelected(this)"
-              />
-              Pun </label
-            ><br />
-            <label class="filters__checkbox">
-              <input
-                type="checkbox"
-                name="category"
-                value="Spooky"
-                onclick="noneCategorySelected(this)"
-              />
-              Spooky </label
-            ><br />
-            <label class="filters__checkbox">
-              <input
-                type="checkbox"
-                name="category"
-                value="Christmas"
-                onclick="noneCategorySelected(this)"
-              />
-              Christmas
-            </label>
-          </div>
-        </div>
+      <div class="master-container">
+         <div class="filters filters-close">
+            <!-- categories -->
+            <div class="filters__categories">
+               <div id="custom-options" class="filters__custom-option">
+                  <h3 class="filters__title">Categories</h3>
+                  <!-- <br /> -->
+                  <label class="filters__option">
+                     <input
+                        checked
+                        type="checkbox"
+                        name="selection"
+                        value="Any"
+                        id="any-joke"
+                     />
+                     Any
+                  </label>
+                  <br />
+                  <label>
+                     <input
+                        type="checkbox"
+                        name="category"
+                        value="Programming"
+                     />
+                     Programming
+                  </label>
+                  <br />
+                  <label class="filters__checkbox">
+                     <input
+                        type="checkbox"
+                        name="category"
+                        value="Miscellaneous"
+                     />
+                     Misc
+                  </label>
+                  <br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="category" value="Pun" />
+                     Pun
+                  </label>
+                  <br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="category" value="Spooky" />
+                     Spooky
+                  </label>
+                  <br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="category" value="Christmas" />
+                     Christmas
+                  </label>
+               </div>
+            </div>
 
-        <div class="filters__flags-blacklist">
-          <!-- Flags to Blacklist <br />
+            <div class="filters__flags-blacklist">
+               <!-- Flags to Blacklist <br />
             (Optional) -->
-          <h3 class="filters__title">
-            Flags to <br />
-            Blacklist
-          </h3>
-          <form>
-            <label class="filters__checkbox">
-              <input type="checkbox" name="option1" value="nsfw" />
-              nsfw </label
-            ><br />
-            <label class="filters__checkbox">
-              <input type="checkbox" name="option2" value="religious" />
-              religious </label
-            ><br />
-            <label class="filters__checkbox">
-              <input type="checkbox" name="option3" value="political" />
-              political </label
-            ><br />
-            <label class="filters__checkbox">
-              <input type="checkbox" name="option4" value="racist" />
-              racist </label
-            ><br />
-            <label class="filters__checkbox">
-              <input type="checkbox" name="option5" value="sexist" />
-              sexist </label
-            ><br />
-            <label class="filters__checkbox">
-              <input type="checkbox" name="option6" value="explicit" />
-              explicit
-            </label>
-          </form>
-        </div>
-      </div>
+               <h3 class="filters__title">
+                  Flags to <br />
+                  Blacklist
+               </h3>
+               <form>
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="option1" value="nsfw" />
+                     nsfw </label
+                  ><br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="option2" value="religious" />
+                     religious </label
+                  ><br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="option3" value="political" />
+                     political </label
+                  ><br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="option4" value="racist" />
+                     racist </label
+                  ><br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="option5" value="sexist" />
+                     sexist </label
+                  ><br />
+                  <label class="filters__checkbox">
+                     <input type="checkbox" name="option6" value="explicit" />
+                     explicit
+                  </label>
+               </form>
+            </div>
+         </div>
 
-      <div class="display-joke">
-        <div
-          class="display-joke__joke-first-part display-joke__joke-first-part-close"
-        >
-          <!--  -->
-          <div class="display-joke__loading display-joke__loading-close">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <!--  -->
-          <p id="joke" class="display-joke__joke"></p>
-        </div>
-        <div
-          class="display-joke__joke-two-parts display-joke__joke-two-parts-close"
-        ></div>
+         <div class="display-joke">
+            <div
+               class="display-joke__joke-first-part display-joke__joke-first-part-close"
+            >
+               <!--  -->
+               <div class="display-joke__loading display-joke__loading-close">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!--  -->
+               <p id="joke" class="display-joke__joke"></p>
+            </div>
+            <div
+               class="display-joke__joke-two-parts display-joke__joke-two-parts-close"
+            ></div>
+         </div>
+         <div class="display-joke__button-container">
+            <button class="display-joke__button">New Joke</button>
+         </div>
       </div>
-      <div class="display-joke__button-container">
-        <button class="display-joke__button">New Joke</button>
-      </div>
-    </div>
-  </body>
+   </body>
 </html>
