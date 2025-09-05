@@ -86,6 +86,7 @@ async function fetchAndDisplayJoke() {
    toggleElementVisibility(displayFilters, false);
    toggleElementVisibility(displayJokeSecondContainer, false);
 
+   // Shows the loading animation
    jokeDisplay.innerHTML = "";
    toggleElementVisibility(displayJokeFirstContainer, true);
    toggleElementVisibility(displayLoading, true);
@@ -97,9 +98,9 @@ async function fetchAndDisplayJoke() {
       jokes.forEach((jokeObj) => {
          toggleElementVisibility(displayLoading, false);
          if (jokeObj.type === "single") {
-            displayJokeSecondContainer.innerHTML = "";
             jokeDisplay.textContent = jokeObj.joke;
-            toggleElementVisibility(displayJokeFirstContainer, false);
+            toggleElementVisibility(displayJokeSecondContainer, false);
+            displayJokeSecondContainer.innerHTML = "";
          } else {
             toggleElementVisibility(displayJokeSecondContainer, true);
             jokeDisplay.innerHTML = `<strong>${jokeObj.setup}</strong>`;
@@ -113,8 +114,11 @@ async function fetchAndDisplayJoke() {
 }
 
 filterToggleBtn.addEventListener("click", toggleFilters);
+
 categoryCheckboxes.forEach((cb) =>
    cb.addEventListener("change", handleCategoryChange)
 );
+
 anyCategoryCheckbox.addEventListener("change", handleAnyCategory);
+
 newJokeBtn.addEventListener("click", fetchAndDisplayJoke);
